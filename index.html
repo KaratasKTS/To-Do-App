@@ -3,9 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To do App</title>
 <script defer src="main.js"></script></head>
 <body>
+    <div class="fatherContainer">
+        <div class="dashboard">
+            
+                <h1> <img src="c29f8adca6a78794c9d8.svg" width="30px"> Task Manager</h1>
+                <div class="pa-flex">
+                    
+                <ul class="ul-flex">
+                <li class="list"> <img src="7627dfa4976d51ee938e.svg" alt="home-icon" width="20px" class="classsvg" >Tasks</li>
+                <div class = 'addtask'>
+                    <li class="list" id="newTaskDT"> <img class="hover" src="77e88e1a994f9a11fca0.svg" width="20px"> New Task</li>
+                    <div class="dailyTaskholder">
+                        
+                    </div>
+                    
+                </div>
+                </ul>
+                <ul class="ul-flex">
+                
+                    <li class="list"> <img src="9c6cb1839edfb7a9950b.svg" alt="home-icon" width="20px" class="classsvg" >Projects</li>
+                    <div class = 'addtask'>
+                        <li class="list" id="newProject"> <img class="hover" src="77e88e1a994f9a11fca0.svg" width="20px"> New Project</li>
+                        <div class="newProjectHolder">
+                            
+                        </div>
+                        
+                    </div>
+                    </ul>
+                </div>
+            
+                
+            
+        </div>
+        <div class="content">
+            <nav class="navv">
+                <div style="visibility: hidden;" class="search">
+                    <img src="8ae9da2a736fbb329d53.svg" class="svgnav" id="magnify" width="30px">
+                    <input class="search" type="search">
+                    
+                </div>
+    
+                <div class="account">
+                    <img src="a254895a44ceb8f907ab.svg" alt="notifications" class="svgnav" id="bell">
+                    <img src="03cb961fbdcac82eb5b0.png" alt="icon"  width="30">
+                    <h3 class="name">KaratasKTS</h3>
+                </div>
+            </nav>
+            <header class="navv">
+                <div class="profilecat">
+                    <img src="03cb961fbdcac82eb5b0.png" alt="profilepic" width="80px">
+                </div>
+                
+                <div class="username">
+                    <h3>hi there,</h3>
+                    <h2>Karatas (@KaratasKTS)</h2>
+                </div>
+               <div class="styleme">Odin Project</div>
+            </header>
+            <section class="content4">
+                <div class="overlay"></div>
+                
+                <form class="dailyTaskModal ">
+                    <div style="display:flex; justify-content: space-between;">
+                        <div class="headerdt">
+                            <h1>New Task</h1>
+                            <div class="projectSelect">
+                                <label for="selectProject"> Project</label>
+                                <select name="Priority" id="selectProject">
+                                    <option value="None">None</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        
+                        <button type="button" id="closedailyTaskModal"> &times; </button>
+                    </div>
+                    
+                    <label for="titleDT">Tilte</label>
+                    <input type="text" id="titleDT" >
+                    <label for="Projects">Create Project</label>
+                    <input type="text" id="Projects" >
+                    <label for="DueDateDT">DueDate</label>
+                    <input type="date" id="DueDateDT" >
+                    <label for="DescriptionDT">Description</label>
+                    <textarea type="text" id="DescriptionDT" ></textarea>
+                    <label for="priorityDT"> Priority</label>
+                        <select name="Priority" id="priorityDT">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    <button type="button" id = "idbtnDT">submit</button>
+                </form>
+                   
+                <form class="editModal">
+                    <div style="display:flex; justify-content: space-between;">
+                        <h1 class="editHeading">Edit Task</h1>
+                        
+                        <button type="button" id="buttonEM"> &times; </button>
+                    </div>
+                    
+                   
+                    <label class="projectEM" for="titleEM">Tilte</label>
+                    <input type="text" id="projectEM" >
+                    <label style="display: none;"  class="titleEM" for="titleEM">project</label>
+                    <input style="display: none;"  type="text" id="titleEM" >
+                    <label class="DueDateEM"  for="DueDateEM">DueDate</label>
+                    <input type="date" id="DueDateEM" >
+                    <label id="DescriptionidLabel" for="DescriptionEM">Description</label>
+                    <textarea type="text"  id="DescriptionEM" ></textarea>
+                    <label > Priority</label>
+                        <select name="Priority" id="priorityEM" class="priorityEM">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    <button type="button" id = "idbtnEM">Submit</button>
+                </form>
+                
+                <form class="Project">
+                    <div style="display:flex; justify-content: space-between;">
+                        <h1>New Project</h1>
+                        <button type="button" id="closeNewProject"> &times; </button>
+                    </div>
+                    
+                    <label for="titlePR">Name Project</label>
+                    <input type="text" id="titlePR" required>
+                    <label for="DueDatePR">DueDate</label>
+                    <input type="date" id="DueDatePR" >
+                    <label for="DescriptionPR">Description</label>
+                    <textarea type="text" id="DescriptionPR" ></textarea>
+                    
+                    <button type="submit" id = "submitNewProject">Submit</button>
+                </form>
+            </section>
+           
+            
+    
+            
     
 </body>
 </html>
