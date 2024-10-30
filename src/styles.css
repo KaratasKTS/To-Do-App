@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --purple-color: #cca8e9;
+    --light-purple-color: #c3bef0; 
+    --light-cyan-color: #E2E8F0; 
+    --light-green-color: #defcf9; 
+    
+    
+}
+html{
+height: 100%;
+
+}
+body{
+    min-height: 100%;
+    overflow: hidden;
+    background-color: var(--light-cyan-color);
+    z-index: 1;
+}
+
+.classsvg{
+    width:30px;
+}
+.svgnav{
+    width: 20px;
+}
+ul {
+    list-style: none;
+    font-size: 20px;
+}
+li {
+    align-content: center;
+}
+img{
+    padding:0;
+    margin: 0;
+}
+.fatherContainer{
+    display: grid;
+    min-height:100%;
+    grid-template-columns: 0.5fr 2fr;
+z-index: 5;
+    
+    
+    
+}
+.navv{
+    z-index: 6;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,165,233,1) 100%);
+    
+}
+.dashboard{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,165,233,1) 100%);
+    padding: 30px;
+    height: 100%;
+    margin-bottom:1000%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-bottom: 100%;
+    box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.08);
+    z-index: 5;
+}
+
+.ul-flex{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+nav {
+    display: flex;
+    gap: 100px;
+    padding: 30px 40px 0 40px;
+    flex-wrap: wrap;
+    
+}
+.account{
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+}
+.search{
+  min-width: 100px;
+  height: 20px;
+  gap:20px;
+  display: flex;
+  padding: 14px;
+  flex-direction: row;
+  flex: 0.9 2 100px;
+}
+#bell{
+    width: 25px;
+}
+
+input{
+    border-radius: 20px;
+    border: none;
+    background-color: var(--light-cyan-color);
+    
+    
+}
+header{
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 1.5fr;
+    
+    justify-self: start; 
+    align-items: center;
+    padding:10px 40px 40px 40px ;
+    margin: 0px;
+    gap: 20px;
+    z-index: 6;
+    
+}
+.username{
+    justify-self: start;
+    
+}
+button{
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px 9px 15px;
+    text-decoration: none;
+    color: black;
+    background-color: var(--light-purple-color);
+    
+
+}
+.links{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding: 10px;
+    
+    
+}
+.links button{
+    flex: 1;
+    width: 120px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.addtask{
+    min-height:250px;
+    width: 90%;
+    background-color: var(--light-cyan-color); 
+    border-radius:5px;
+    padding:10px;
+    
+}
+
+.content4{
+    background: var(--light-cyan-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.Project{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    padding:20px;
+    position: fixed;
+    top: 30%;
+    left:40%;
+    gap:5px;
+    background-color: #e0d7e7;
+    border-radius:10px;
+    z-index: 11;
+    box-shadow: 1px 1px 10px 10px rgba(255, 255, 255, 0.135);
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
+.dailyTaskModal{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    padding:20px;
+    position: fixed;
+    top: 30%;
+    left:40%;
+    gap:5px;
+    background-color: #cca8e9;
+    border-radius:10px;
+    z-index: 11;
+    box-shadow: 1px 1px 10px 10px rgba(255, 255, 255, 0.135);
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.editModal{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    padding:20px;
+    position: fixed;
+    top: 30%;
+    left:40%;
+    gap:5px;
+    background-color: #007298;
+    color:white;
+    border-radius:10px;
+    z-index: 5;
+    box-shadow: 1px 1px 10px 10px rgba(255, 255, 255, 0.135);
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.editModal.active{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    padding:20px;
+    position: fixed;
+    top: 30%;
+    left:40%;
+    gap:5px;
+    background-color: #007298;
+    color:white;
+    border-radius:10px;
+    z-index: 12;
+    box-shadow: 1px 1px 10px 10px rgba(255, 255, 255, 0.135);
+    transform: scale(1);
+}
+
+
+.overlay{
+    position:fixed;
+    background: rgb(2,0,36);
+    background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(61,61,138,1) 35%, rgba(0,212,255,1) 100%); 
+    opacity: 0.5;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    transform: scale(0);
+    
+}
+
+.dailyTaskModal.active,.Project.active{
+    transform: scale(1);
+    position: fixed;
+    top: 20%;
+    left:40%;
+
+}
+.overlay.active{
+    position:fixed;
+    background: rgb(2,0,36);
+    background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(61,61,138,1) 35%, rgba(0,212,255,1) 100%); 
+    opacity: 0.5;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    transform: scale(1);
+}
+
+.dailyTaskModal input,.Project input{
+    background-color: white;
+    padding:10px;
+}
+#DescriptionDT,.DescriptionEM,#DescriptionPR{
+    PADDING:10PX;
+    resize: none;
+    height: 200px;
+    border:none;
+    border-radius: 10px;;
+}
+#idbtnDT,.idbtn{
+    margin-top:10px;
+    cursor: pointer;
+}
+
+#priorityDT{
+   height: 30px;
+   padding-left:10px;
+   background-color: white;
+   border: none;
+   border-radius: 5px;
+}
+
+.priorityEM{
+    height: 30px;
+    padding-left:10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+ }
+
+.dailyTaskholder,.newProjectHolder{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: space-between;
+    
+}
+
+
+
+#closedailyTaskModal,#buttonEM{
+    font-size:30px;
+    cursor:pointer;
+    background: none;
+    outline: none;
+    
+  
+}
+.dailyTaskBox,.projectbox{
+    display: flex;
+    gap:20px;
+    border:1px solid white;
+    border-radius:10px;
+    background-color: white;
+    padding: 1px;
+    padding-left: 6px;
+    font-size: 16px;
+
+}
+
+.projectbox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bigdailyTaskBox{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(1fr, 6);
+    width: 100%;
+    gap:20px;
+    border:2px solid var(--light-green-color);
+    justify-content: space-around;
+    border-radius:5px ;
+    background-color: white;
+    padding: 1px;
+    padding-left: 6px;
+    font-size: 16px;
+}
+
+.bigdailyTaskBox .dailytaskproject,
+.bigdailyTaskBox .dailyTaskTitle,
+.bigdailyTaskBox .dailyTaskDate,
+.bigdailyTaskBox .dailyTaskDescription,
+.bigdailyTaskBox .dailyTaskPriority,
+.bigdailyTaskBox .dailyTaskEdit {
+    width: 115px;
+    display: flex;
+    align-items: center;
+    
+}
+.dailyTaskholder .dailytaskproject,
+.dailyTaskholder .dailyTaskTitle,
+.dailyTaskholder .dailyTaskDate,
+.dailyTaskholder .dailyTaskDescription,
+.dailyTaskholder .dailyTaskPriority,
+.dailyTaskholder .dailyTaskEdit {
+    width: 85px;
+    display: flex;
+    align-items: center;
+}
+.newProjectHolder .dailytaskproject,
+.newProjectHolder .dailyTaskTitle,
+.newProjectHolder .dailyTaskDate,
+.newProjectHolder .dailyTaskDescription,
+.newProjectHolder .dailyTaskPriority,
+.newProjectHolder .dailyTaskEdit {
+    width: 85px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.content4{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    padding:10px;
+}
+
+.pa-flex{
+    display: flex;
+    flex-direction: column;
+    gap:70px;
+}
+
+#newProject{
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+#newTaskDT{
+    cursor: pointer;
+}
+.projectSelect{
+    font-weight: 500;
+    display:flex;
+    flex-direction: column;
+}
+
+.hover:hover{
+    animation: hover 0.2s  forwards ease-in-out; 
+    cursor: pointer;
+}
+
+@keyframes hover{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-3px);}
+}
+
+.checked{
+    display: none;
+}
+
+.styleme{
+    background: rgb(37,127,186);
+    background: linear-gradient(130deg, rgba(37,127,186,1) 0%, rgba(253,63,45,1) 100%); 
+    position: relative;
+    left:70px;
+    border-radius: 80px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent; 
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
+}
